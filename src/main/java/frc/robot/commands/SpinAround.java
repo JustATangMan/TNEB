@@ -19,7 +19,7 @@ public class SpinAround extends CommandBase {
 
   public SpinAround() {
     // Use addRequirements() here to declare subsystem dependencies.
-    // addRequirements(Robot.m_spinner);
+    addRequirements(Robot.m_spinner);
     time = new Timer();
   }
 

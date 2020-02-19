@@ -29,7 +29,7 @@ import frc.robot.subsystems.Spinner;
  * project.
  */
 public class Robot extends TimedRobot {
-  // private static final String kDefaultAuto = "Default";
+  private static final String kDefaultAuto = "Forward 1 sec 25%";
   // private static final String kCustomAuto = "My Auto";
   private String m_autoSelected;
   private final SendableChooser<String> m_chooser = new SendableChooser<>();
@@ -53,6 +53,7 @@ public class Robot extends TimedRobot {
     // SmartDashboard.putData("Auto choices", m_chooser);
     m_chooser.addOption("Spin 1 sec 25%", "AutoSpin()");
     m_chooser.addOption("Forward 1 sec 25%", "AutoForward()");
+    SmartDashboard.putData("AutoChoices", m_chooser);
   }
 
   // public static DriveTrain getDriveTrain(){
@@ -90,6 +91,7 @@ public class Robot extends TimedRobot {
   @Override
   public void autonomousInit() {
     m_autoSelected = m_chooser.getSelected();
+    SmartDashboard.getString("AutoChoices", kDefaultAuto);
     // m_autoSelected = SmartDashboard.getString("Auto Selector", kDefaultAuto);
     System.out.println("Auto selected: " + m_autoSelected);
   }

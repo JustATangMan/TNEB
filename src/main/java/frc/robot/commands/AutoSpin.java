@@ -19,7 +19,7 @@ public class AutoSpin extends CommandBase {
   Timer time = new Timer();
 
   public AutoSpin() {
-    // addRequirements(new DriveTrain());
+    addRequirements(new DriveTrain());
     // Use addRequirements() here to declare subsystem dependencies.
   }
 

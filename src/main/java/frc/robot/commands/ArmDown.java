@@ -15,7 +15,7 @@ public class ArmDown extends CommandBase {
    * Creates a new ArmDown.
    */
   public ArmDown() {
-    // addRequirements(Robot.m_arm);
+    addRequirements(Robot.m_arm);
     // Use addRequirements() here to declare subsystem dependencies.
   }
 

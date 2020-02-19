@@ -7,6 +7,7 @@
 
 package frc.robot.subsystems;
 
+import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
@@ -21,10 +22,15 @@ public class Hanger extends SubsystemBase {
   }
 
   public void extend() {
+    talon.set(ControlMode.PercentOutput, 0.25);
   }
 
   public void retract() {
+    talon.set(ControlMode.PercentOutput, -0.25);
+  }
 
+  public void stop() {
+    talon.set(ControlMode.PercentOutput, 0);
   }
 
   @Override

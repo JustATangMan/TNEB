@@ -15,7 +15,7 @@ public class ArmUp extends CommandBase {
    * Creates a new ArmUp.
    */
   public ArmUp() {
-    // addRequirements(Robot.m_arm);
+    addRequirements(Robot.m_arm);
     // Use addRequirements() here to declare subsystem dependencies.
   }
 

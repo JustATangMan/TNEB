@@ -18,7 +18,7 @@ public class SpinColor extends CommandBase {
 
   public SpinColor(int aimColor) {
     // Use addRequirements() here to declare subsystem dependencies.
-    // addRequirements(Robot.m_spinner);
+    addRequirements(Robot.m_spinner);
   }
 
   // Called when the command is initially scheduled.

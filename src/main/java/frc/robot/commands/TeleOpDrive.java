@@ -33,7 +33,7 @@ public class TeleOpDrive extends CommandBase {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    Robot.m_drive.drive(stick.getY() * stick.getThrottle(), 0.75 * stick.getTwist() * Math.abs(stick.getThrottle()));
+    Robot.m_drive.drive(-stick.getY() * stick.getThrottle(), 0.75 * stick.getTwist() * Math.abs(stick.getThrottle()));
   }
 
   // Called once the command ends or is interrupted.
