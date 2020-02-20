@@ -94,13 +94,6 @@ public class Robot extends TimedRobot {
     SmartDashboard.getString("AutoChoices", kDefaultAuto);
     // m_autoSelected = SmartDashboard.getString("Auto Selector", kDefaultAuto);
     System.out.println("Auto selected: " + m_autoSelected);
-  }
-
-  /**
-   * This function is called periodically during autonomous.
-   */
-  @Override
-  public void autonomousPeriodic() {
     switch (m_autoSelected) {
     case "Spin 1 sec 25%":
       // Put custom auto code here
@@ -111,6 +104,14 @@ public class Robot extends TimedRobot {
       // Put default auto code here
       break;
     }
+  }
+
+  /**
+   * This function is called periodically during autonomous.
+   */
+  @Override
+  public void autonomousPeriodic() {
+
   }
 
   /**
