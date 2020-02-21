@@ -16,7 +16,7 @@ public class Intake extends SubsystemBase {
   /**
    * Creates a new Intake.
    */
-  TalonSRX talon = new TalonSRX(2);
+  TalonSRX talon = new TalonSRX(3);
 
   public Intake() {
 

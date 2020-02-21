@@ -7,27 +7,32 @@
 
 package frc.robot.commands;
 
+import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.Robot;
 
-public class TakeIn extends CommandBase {
+public class AutoOutput extends CommandBase {
   /**
-   * Creates a new TakeIn.
+   * Creates a new AutoOutput.
    */
-  public TakeIn() {
-    // Use addRequirements() here to declare subsystem dependencies.
+  Timer time = new Timer();
+
+  public AutoOutput() {
     addRequirements(Robot.m_intake);
+    // Use addRequirements() here to declare subsystem dependencies.
   }
 
   // Called when the command is initially scheduled.
   @Override
   public void initialize() {
+    time.reset();
+    time.start();
   }
 
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    Robot.m_intake.in();
+    Robot.m_intake.out();
   }
 
   // Called once the command ends or is interrupted.
@@ -39,7 +44,6 @@ public class TakeIn extends CommandBase {
   // Returns true when the command should end.
   @Override
   public boolean isFinished() {
-    return !Robot.m_oi.getInBut();
-    // return !Robot.m_oi.getLTrig();
+    return time.get() > 1;
   }
 }

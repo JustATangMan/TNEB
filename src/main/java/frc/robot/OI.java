@@ -40,20 +40,20 @@ public class OI {
     public OI() {
 
         // triggercontrol with gamepad
-        if (gamePad.getRawAxis(3) == 1) {
-            new GoOut();
-        }
-        if (gamePad.getRawAxis(2) == 1) {
-            new TakeIn();
-        }
+        // if (gamePad.getRawAxis(3) == 1) {
+        // new GoOut();
+        // }
+        // if (gamePad.getRawAxis(2) == 1) {
+        // new TakeIn();
+        // }
 
         // button control with joystick
-        // btnIn.whileHeld(new TakeIn());
-        // btnOut.whileHeld(new GoOut());
+        btnIn.whileHeld(new TakeIn());
+        btnOut.whileHeld(new GoOut());
 
         // hopefully constant buttons so no worries
-        btnHangEx.whileHeld(new HangEx());
-        btnHangRet.whileHeld(new HangRet());
+        // btnHangEx.whileHeld(new HangEx());
+        // btnHangRet.whileHeld(new HangRet());
 
         btnArmUp.whileHeld(new ArmUp());
         btnArmDown.whileHeld(new ArmDown());

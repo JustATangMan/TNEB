@@ -13,6 +13,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 import frc.robot.commands.AutoForward;
+import frc.robot.commands.AutoOutput;
 import frc.robot.commands.AutoSpin;
 import frc.robot.commands.TeleOpDrive;
 import frc.robot.subsystems.Arm;
@@ -53,6 +54,7 @@ public class Robot extends TimedRobot {
     // SmartDashboard.putData("Auto choices", m_chooser);
     m_chooser.addOption("Spin 1 sec 25%", "AutoSpin()");
     m_chooser.addOption("Forward 1 sec 25%", "AutoForward()");
+    m_chooser.addOption("Release balls", "ReleaseBalls()");
     SmartDashboard.putData("AutoChoices", m_chooser);
   }
 
@@ -102,6 +104,11 @@ public class Robot extends TimedRobot {
     case "Forward 1 sec 25%":
       new AutoForward();
       // Put default auto code here
+      break;
+    case "Release balls":
+      new AutoForward();
+      new AutoSpin();
+      new AutoOutput();
       break;
     }
   }

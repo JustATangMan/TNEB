@@ -39,7 +39,7 @@ public class GoOut extends CommandBase {
   // Returns true when the command should end.
   @Override
   public boolean isFinished() {
-    // return !Robot.m_oi.getOutBut();
-    return !Robot.m_oi.getRTrig();
+    return !Robot.m_oi.getOutBut();
+    // return !Robot.m_oi.getRTrig();
   }
 }

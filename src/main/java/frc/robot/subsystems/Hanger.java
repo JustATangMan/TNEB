@@ -16,7 +16,7 @@ public class Hanger extends SubsystemBase {
   /**
    * Creates a new Hanger.
    */
-  private final TalonSRX talon = new TalonSRX(3);
+  private final TalonSRX talon = new TalonSRX(2);
 
   public Hanger() {
   }
